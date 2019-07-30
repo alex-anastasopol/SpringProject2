@@ -10,7 +10,7 @@ public class Main {
     private ChessGame chessGame;
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        ChessGame game = context.getBean("chessGame");
-        game.play();
+        ChessGame chessGame = context.getBean("game", ChessGame.class);
+        chessGame.play();
     }
 }
